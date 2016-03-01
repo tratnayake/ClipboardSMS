@@ -17,4 +17,5 @@
 coverage
 node_modules
 npm-debug.log
-sendgrid_API.txt
+clipboardSMS/sendgrid_API.txt
+clipboardSMS/server/datasources.json
