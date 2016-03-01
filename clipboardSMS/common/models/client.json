@@ -1,0 +1,33 @@
+{
+  "name": "client",
+  "base": "User",
+  "strict": true,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "emailVerified": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "verificationToken": {
+      "type": "string",
+      "required": true,
+      "defaultFn": "uuid"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "ALLOW",
+      "property": "login"
+    }
+  ],
+  "methods": {}
+}

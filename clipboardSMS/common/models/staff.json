@@ -1,0 +1,32 @@
+{
+  "name": "staff",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "emailAddress": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "rank": {
+      "type": "belongsTo",
+      "model": "rank",
+      "foreignKey": "rank_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

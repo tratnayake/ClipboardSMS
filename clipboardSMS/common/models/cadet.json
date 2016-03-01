@@ -1,0 +1,35 @@
+{
+  "name": "cadet",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "CIN": {
+      "type": "number",
+      "id": true,
+      "required": true,
+      "index": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "firstName": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "rank": {
+      "type": "belongsTo",
+      "model": "rank",
+      "foreignKey": "rank_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,66 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "pg"
+  },
+  "AccessToken": {
+    "dataSource": "pg",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "pg",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "pg",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "pg",
+    "public": false
+  },
+  "rank": {
+    "dataSource": "pg",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "staff": {
+    "dataSource": "pg",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "cadet": {
+    "dataSource": "pg",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  "client": {
+    "dataSource": "pg",
+    "public": true,
+    "$promise": {},
+    "$resolved": true,
+    "options": {
+      "emailVerificationRequired": true
+    }
+  },
+  "Email": {
+          "dataSource": "sendgrid",
+          "public": false
+      }
+}
